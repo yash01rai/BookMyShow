@@ -10,5 +10,5 @@ public class BookMyShow24Application {
 	public static void main(String[] args) {
 		SpringApplication.run(BookMyShow24Application.class, args);
 	}
-
 }
+

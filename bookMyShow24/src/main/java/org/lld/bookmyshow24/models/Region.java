@@ -1,33 +1,24 @@
 package org.lld.bookmyshow24.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
+@Entity
 public class Region extends BaseModal {
+
     private String name;
-    private List<Movie> movies;
+
+    // 1 : M
+    // 1 : 1
+    @OneToMany
     private List<Theater> theaters;
 
-    public String getName() {
-        return name;
-    }
+    // private List<Movie> movies;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Movie> getMovies() {
-        return movies;
-    }
-
-    public void setMovies(List<Movie> movies) {
-        this.movies = movies;
-    }
-
-    public List<Theater> getTheaters() {
-        return theaters;
-    }
-
-    public void setTheaters(List<Theater> theaters) {
-        this.theaters = theaters;
-    }
 }

@@ -1,8 +1,11 @@
 package org.lld.bookmyshow24.models;
 
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,6 +17,7 @@ import java.util.Date;
 public class BaseModal {
 
     @Id // make it the primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
     private int id;
 
     private Date createdAt;

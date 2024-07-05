@@ -1,9 +1,6 @@
 package org.lld.bookmyshow24.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,6 +18,11 @@ public class Booking extends BaseModal {
     // M : 1
     @ManyToOne
     private User user;
+
+    // tell this an enum
+    // ORDINAL -> 1, 2, 3
+    // STRING -> string values
+    @Enumerated(EnumType.ORDINAL)
     private BookingStatus bookingStatus;
     private Date bookedAt;
 
