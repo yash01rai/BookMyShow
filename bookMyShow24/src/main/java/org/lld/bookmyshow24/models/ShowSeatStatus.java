@@ -4,7 +4,9 @@ public enum ShowSeatStatus {
 
     EMPTY,
 
-    FILLED,
+    BOOKED,
 
-    NOT_AVAILABLE
+    NOT_AVAILABLE,
+
+    BLOCKED
 }

@@ -40,6 +40,7 @@ public class Booking extends BaseModal {
     // 1 : M , booking has many payments
     // 1 : 1
     @OneToMany
+    @JoinColumn(name = "booking_id")
     private List<Payment> payments;
 
 }

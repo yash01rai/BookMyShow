@@ -13,6 +13,7 @@ import java.util.List;
 public class User extends BaseModal {
     private String name;
     private String email;
+    private String password;
 
     // 1 : M
     // 1 : 1
